@@ -82,6 +82,13 @@ export class PacketStatusComponent implements OnInit {
           } else {
             this.data = allData;
           }
+          this.data.forEach((item, index) => {
+            console.log(`Index: ${index}`);
+            console.log(`Transaction Type: ${item.transactionTypeCode}`);
+            console.log(`Status Code: ${item.statusCode}`);
+            console.log(`Message: ${item.statusMessage || 'No message available'}`);
+            console.log('-----------------------------');
+          });
 
           let i = this.data.length - 1;
           if (this.data[i].statusCode.includes('FAILED')) {
