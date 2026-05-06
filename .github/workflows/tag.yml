@@ -23,6 +23,7 @@ on:
         default: False
         type: string
 
+
 jobs:
   tag-branch:
     uses: mosip/kattu/.github/workflows/tag.yml@master
